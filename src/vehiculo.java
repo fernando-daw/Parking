@@ -1,32 +1,35 @@
+import java.util.Random;
+
 public class vehiculo {
     private int tamaño;
-    private String matricula="";
+    private String matricula;
     private String tipo;
 
-     //funcion que crea las letras de las matrículas de forma aleatoria
-    public  String  letrasMatricula (){
-        String arrayletras ="bcdfghjklmnpqrstvwxyz";
-        String matricula1="";
-        for (int i=0; i<3;i++){
-            int letra = (int) Math.random() *23;
-             matricula1 = matricula + arrayletras.charAt(letra);
+    //contructor parametrizado que recibe el tamano introducido por el usuario
+    public vehiculo (int tamaño){
+        this.tamaño=tamaño;
+        if (tamaño==1){
+            tipo="coche";
         }
-        return matricula1;
-     }
-     public String numerosMatricula(){
-        String arraynumeros = "1234567890";
-         String matricula2="";
-        for (int i=0;i<4;i++){
-            int num = (int) Math.random() *23;
-             matricula2 = matricula + arraynumeros.charAt(num);
+        if (tamaño==2){
+            tipo="camion";
         }
-        return matricula2;
-     }
-     public void juntarMatricula (){
-        String matriculafinal="";
-        matriculafinal=letrasMatricula() + numerosMatricula();
+        letrasMatricula();
+    }
 
+     //funcion que crea las matrículas de forma aleatoria
+    public  String  letrasMatricula (){
+        Random ale2 = new Random();
+        int aleatorio2= ale2.nextInt(9999)+1000;
+        String [] arrayletras ={"b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z"};
+        for (int i=0; i<3;i++){
+            Random ale = new Random();
+            int aleatorio = ale.nextInt(arrayletras.length);
+            matricula = aleatorio2 + arrayletras[aleatorio];
+        }
+        return matricula ;
      }
+
 
 
 }
