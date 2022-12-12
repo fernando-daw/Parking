@@ -23,7 +23,7 @@ public class Parking {
         Scanner preguntar = new Scanner(System.in);
         System.out.println("Introduce la matricula del coche que quieres encontrar");
         String consulta = preguntar.nextLine();
-        for (int i=1;i< lista_vehiculo.length;i++){
+        for (int i=0;i< lista_vehiculo.length;i++){
             if (consulta==matricula){
                 System.out.println("Tu vehiculo esta en la plaza " + i);
             }
@@ -37,7 +37,7 @@ public class Parking {
         Scanner preguntar2 = new Scanner(System.in);
         System.out.println("Indica la posicion de tu vehiculo");
         int consulta2=preguntar2.nextInt();
-        for (int i=1;i< lista_vehiculo.length;i++){
+        for (int i=0;i< lista_vehiculo.length;i++){
             if (consulta2==i){
                 System.out.println("Coche encontrado en la plaza"  + consulta2+ " con matricula " + matricula);
             }
