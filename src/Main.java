@@ -27,7 +27,7 @@ public class Main {
                     parking.encontrarcoche(coches);
                     break;
                 case 4:
-                    parking.quitar_vehiculo(coches);
+                   // parking.quitar_vehiculo(coches); no he sabido terminar este apartado
                     break;
                 case 5:
                     System.out.println("Fin del programa");
